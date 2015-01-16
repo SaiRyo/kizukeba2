@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>{$smarty.const.APP_NAME}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+
+    <link href="{$smarty.const.WEB_MODULE_URL}/{$smarty.const.WEB_LIB_URL}css/bootstrap.min.css" rel="stylesheet">
+    <link href="{$smarty.const.WEB_MODULE_URL}/{$smarty.const.CSS_URL}com.css" rel="stylesheet">
+    <link href="{$smarty.const.WEB_MODULE_URL}/{$smarty.const.CSS_URL}admin.css" rel="stylesheet">
+    <link href="{$smarty.const.WEB_MODULE_URL}/favicon.ico" rel="shortcut icon">
+
+  </head>
+  <body>
+
+    <div id="nf-main-wrap">
+
+<!--
+      <div id="nf-left-wrap">
+-->
+
+{if $_showMenu !== true}
+      <div id="nf-left-wrap">
+        <div id="nf-left-menu">
+          <ul class="nav nav-list nf-menu-list">
+            <li {if $_funcno === 's01'} class="active"{/if}><a href=""><i class="icon-chevron-right"></i>&nbsp;{__('スタッフ管理')}</a></li>
+            <li {if $_funcno === 's02'} class="active"{/if}><a href=""><i class="icon-chevron-right"></i>&nbsp;{__('商品管理')}</a></li>
+            <li {if $_funcno === 's03'} class="active"{/if}><a href=""><i class="icon-chevron-right"></i>&nbsp;{__('注文ダウンロード')}</a></li>
+          </ul>
+        </div><!--#nf-left-menu-->
+      </div><!--#nf-left-wrap-->
+{/if}
+
+	<div id="nf-left-footer-sec">
+		<a href="..">{__('ログアウト')}</a>
+	</div>
+
+<!--
+	</div>
+-->
+</div>

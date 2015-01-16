@@ -1,0 +1,248 @@
+/*
+ * ログイン
+ */
+#nf-login-box{
+    width:500px;
+    margin:100px auto;
+}
+
+/*
+ * 共通ヘッダー
+ */
+#nf-right{
+	float: right;
+    font-weight: normal;
+    line-height: 28px;
+    overflow: hidden;
+    position: fixed;
+    width: 260px;
+    height:100%;
+    background: none repeat scroll 0 0 #5E8887;
+    color:#fff;
+}
+
+/*
+ * 右側
+ */
+#nf-left-wrap {
+    float: left;
+    font-weight: normal;
+    line-height: 28px;
+    overflow: hidden;
+    position: fixed;
+    width: 260px;
+    height:100%;
+    background: none repeat scroll 0 0 #5E8887;
+    color:#fff;
+}
+.nf-menu-list{
+    background-color: #FFFFFF;
+            border-radius: 6px;
+       -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    margin: 30px 10px 0;
+    padding: 0;
+    width:230px;
+    }
+    .nf-menu-list > li > a{
+        border: 1px solid #E5E5E5;
+        display: block;
+        margin: 0 0 -1px;
+        padding: 8px 14px;
+    }
+    .nf-menu-list > li:first-child > a{
+                border-radius: 6px 6px 0 0;
+           -moz-border-radius: 6px 6px 0 0;
+        -webkit-border-radius: 6px 6px 0 0;
+    }
+    .nf-menu-list > li:last-child > a {
+                border-radius: 0 0 6px 6px;
+           -moz-border-radius: 0 0 6px 6px;
+        -webkit-border-radius: 0 0 6px 6px;
+        }
+        .nf-menu-list .icon-chevron-right {
+            float: right;
+            margin-right: -6px;
+            margin-top: 2px;
+            opacity: 0.25;
+        }
+    .nf-menu-list > li.active > a{
+        border:0;
+    }
+    .nf-menu-list > li.active .icon-chevron-right {
+        opacity: 1;
+    }
+
+#nf-left-footer{
+    position:absolute;
+    bottom:0;
+    padding:10px;
+}
+#nf-left-footer>a{
+    color:#fff;
+}
+
+#nf-left-footer-sec{
+    position:absolute;
+    bottom:0;
+    right:10px;
+    padding:10px;
+}
+#nf-left-footer-sec>a{
+    color:#fff;
+}
+/*
+ * 左側
+ */
+#nf-main-contents{
+    margin-left: 260px;
+/*    position: fixed;*/
+    overflow-x: auto;
+    height: 100%;
+}
+.nf-main{
+    width:95%;
+    padding:10px 0 0 20px;
+}
+.nf-m-header {
+    height: 2.769em;
+    margin: 0 0 10px;
+    min-height: 36px;
+    border-bottom:5px solid #ccc;
+    }
+    .nf-m-title{
+        padding-left:5px;
+        white-space: nowrap;
+    }
+.nf-m-content{
+    height:100%;
+    padding-top:10px;
+    }
+    .nf-set-content {
+        margin: 25px 0 0 30px;
+        }
+        .nf-set-subtitle {
+            padding:0 0 3px 3px;
+            margin-bottom:0px;
+            border-bottom: 2px solid #ccc;
+        }
+        .nf-set-content>.nf-set-table{
+            padding-left:50px;
+        }
+        .nf-set-content>.nf-set-table tr:first-child th,
+        .nf-set-content>.nf-set-table tr:first-child td{
+            border-top:0;
+        }
+
+/*
+ * 一覧
+ */
+.nf-list-view>table{
+    margin:10px 0;
+    table-layout: fixed;
+}
+.nf-list-view>table th{
+    text-align: left;
+    vertical-align: middle;
+    white-space: nowrap;
+    /* ...用 */
+    overflow: hidden;
+    word-wrap: normal;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+}
+.nf-list-view>table td{
+    /* ...用 */
+    overflow: hidden;
+    word-wrap: normal;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+}
+
+/*
+ * 登録画面
+ */
+.nf-setarea>table{
+    margin:0;
+    table-layout:fixed;
+}
+.nf-setarea p.text-info {
+    margin:0;
+}
+.nf-setarea{
+    padding: 5px 20px 10px;
+    }
+    .nf-setarea>.nf-set-table th,
+    .nf-setarea>.nf-set-table td{
+        border-top:0;
+        border-bottom: 1px solid #DDDDDD;
+    }
+    .nf-setarea>.nf-set-table th{
+        word-break: normal;
+    }
+    .nf-setarea>.nf-set-table td{
+        white-space: nowrap;
+    }
+    .nf-setarea input,
+    .nf-setarea select{
+        margin-bottom:0px;
+    }
+
+/***********************************************************
+  基本設定
+ **********************************************************/
+
+/***********************************************************
+  スタッフ管理
+ **********************************************************/
+/*
+ * 一覧
+ */
+th.fd-th-name,
+td.fd-td-name{
+    width:70%;
+}
+th.fd-th-catname,
+td.fd-td-catname{
+    width:30%;
+}
+th.fd-th-date,
+td.fd-td-date {
+    width:135px;
+}
+
+/*
+ * チェックアイコン
+ */
+.nf-icon-chk-ok,
+.nf-icon-chk-ng,
+.nf-icon-chk-pr{
+    display: inline-block;
+    height: 16px;
+    line-height: 16px;
+    margin-top: 1px;
+    vertical-align: text-top;
+    width: 16px;
+    background-repeat: no-repeat;
+}
+.nf-icon-chk-ok{ background-image: url(../img/ic_cheak_on.png); }
+.nf-icon-chk-ng{ background-image: url(../img/ic_cheak_off.png); }
+.nf-icon-chk-pr{ background-image: url(../img/ic_cheak_pr.png); }
+
+.nf-icon-loading{
+    display:inline-block;
+    width: 16px;
+    height:16px;
+    margin-left:5px;
+    background-repeat: no-repeat;
+    background-image: url(../img/ic_loading.gif);
+    vertical-align: middle;
+}
+
+.nf-url-chk-msgarea{
+    font-size:12px;
+}

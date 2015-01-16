@@ -1,0 +1,146 @@
+body{
+    padding:0;
+    margin:0;
+}
+body, input, button, select, textarea{
+    font-family: 'Helvetica Neue', Helvetica, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, Arial,sans-serif;
+}
+article h1{
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    font-weight: normal;
+}
+label {
+    margin-bottom: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+input[type="radio"], input[type="checkbox"]{
+    margin-top: 0;
+}
+ol, ul{
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+#nf-main-wrap{
+    margin:auto;
+    text-align: left;
+}
+.co-fleft{
+    float:left;
+}
+.co-fright{
+    float:right;
+}
+
+.co-ellipsis{
+    /* ...用 */
+    overflow: hidden;
+    word-wrap: normal;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+}
+
+
+/*
+ * 設定テーブル
+ */
+.nf-set-table th{
+    width:150px;
+    text-align: right;
+    vertical-align:top;
+}
+th.co-chk, td.co-chk{
+    padding: 0 10px;;
+    text-align: center !important;
+    vertical-align: middle;
+    width: 20px;
+}
+td.co-nodata{
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+    vertical-align: middle;
+}
+th .co-order{
+}
+th .co-order:before{
+    margin: -5px 2px 0 0;
+    width: 0;
+    height: 0;
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    border-style: solid;
+}
+th .co-order.asc:before{
+    border-width: 0 5px 5px 5px;
+    border-color: transparent transparent #333 transparent;
+}
+th .co-order.desc:before{
+    border-width: 5px 5px 0 5px;
+    border-color: #333 transparent transparent transparent;
+}
+
+/*
+ * コロン
+ */
+.co-colon{
+    padding-right: 1em;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+}
+.co-colon:after{
+    content: ":";
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.co-required:after {
+    color: #FF6600;
+    content: "(*)";
+    font-weight: normal;
+    margin-left: 2px;
+}
+/*
+ * co-actionwrap
+ */
+.co-actionwrap {
+    margin: 0 0 5px;
+    white-space: nowrap;
+}
+.co-actionwrap.bottom {
+    margin: 5px 0 0;
+}
+.co-actionwrap:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+.co-actionarea {
+    float: left;
+    min-height: 20px;
+}
+.co-actionarea:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+.co-actionarea > .line {
+    border-left: 1px solid #ddd;
+    color: transparent;
+    margin: 2px;
+    padding: 0;
+    width: 0;
+    display: inline-block;
+    width: 0px;
+    text-indent: -9999px;
+    vertical-align: middle;
+}

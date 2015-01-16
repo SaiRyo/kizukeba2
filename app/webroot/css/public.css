@@ -1,0 +1,520 @@
+/*
+ * 右側
+ */
+ 
+#nf-left-wrap {
+    float: left;
+    font-weight: normal;
+    line-height: 28px;
+    overflow: hidden;
+    width: 260px;
+    height:100%;
+    position:fixed;
+    background-color:#F5F5F5;
+    color:#666;
+}
+#nf-left-wrap a,
+#nf-left-wrap a:focus{
+    outline: 0;
+    text-decoration: none;
+}
+.nf-left-footer{
+    position:absolute;
+    bottom:0;
+    padding:10px;
+	}
+	.nf-left-footer>a{
+	    color:#666;
+	}
+
+.nf-category-area{
+    overflow-y:auto;
+    }
+    .nf-category-area a{
+        color:#666;
+        display:inline-block;
+        vertical-align: middle;
+    }
+    .nf-category-list{
+        border-top: 1px solid #ccc;
+    }
+    .nf-category-list:first-child{
+        border-top: 0;
+    }
+    .nf-category-list>li{
+        font-size:14px;
+        line-height:28px;
+        }
+        .nf-category-head{
+            border-left:3px solid transparent;
+        }
+        .on>.nf-category-head{
+            border-left:3px solid #FF6633;
+        }
+        .on>.nf-category-head a{
+            color: #FF6633;
+            font-weight: bold;
+        }
+        .nf-category-head:hover{
+            background-color:#e6e6e6;
+            box-shadow:         0px 1px 1px rgba(0,0,0,0.2) inset;
+            -moz-box-shadow:    0px 1px 1px rgba(0,0,0,0.2) inset;
+            -webkit-box-shadow: 0px 1px 1px rgba(0,0,0,0.2) inset;
+        }
+        .on>.nf-category-head:hover{
+            background-color:#F5F5F5;
+            box-shadow:         0px 0px 0px transparent inset;
+            -moz-box-shadow:    0px 0px 0px transparent inset;
+            -webkit-box-shadow: 0px 0px 0px transparent inset;
+            }
+            .nf-category-head>i{
+                margin: 0 0 0 5px;
+                width: 0;
+                height: 0;
+                cursor:pointer;
+                display:inline-block;
+                vertical-align: middle;
+                border-style: solid;
+                border-width: 5px 2px 5px 5px;
+                border-color: transparent transparent transparent #666;
+            }
+            .nf-category-head>i.on{
+                margin: 4px 0 0 2px;
+                border-width: 5px 5px 2px 5px;
+                border-color: #666 transparent transparent transparent;
+            }
+            .on>.nf-category-head>i{
+                border-color: transparent transparent transparent #f63;
+            }
+            .on>.nf-category-head>i.on{
+                border-color: #f63 transparent transparent transparent;
+            }
+            .nf-category-title{
+                cursor:pointer;
+                display:inline-block;
+                width:215px;
+                vertical-align:top;
+                padding: 0 5px;
+                /* ...用 */
+                overflow: hidden;
+                word-wrap: normal;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                -o-text-overflow: ellipsis;
+                -ms-text-overflow: ellipsis;
+            }
+            .nf-category-title:hover{
+                text-decoration: none;
+            }
+
+    .nf-category-feed-list{
+        display:none;
+        width:210px;
+        margin: 0 0 0 15px;
+        padding: 5px 5px 5px 20px;
+        background-color:#dcdcdc;
+        -webkit-border-radius: 5px;
+           -moz-border-radius: 5px;
+                border-radius: 5px;
+        box-shadow:         0px 1px 1px rgba(0,0,0,0.2) inset;
+        -moz-box-shadow:    0px 1px 1px rgba(0,0,0,0.2) inset;
+        -webkit-box-shadow: 0px 1px 1px rgba(0,0,0,0.2) inset;
+
+        list-style-image: url(../img/ic_li_point.png);
+        list-style-position: outside;
+        }
+        .nf-category-feed-list>li{
+            font-size:12px;
+            }
+            .nf-category-feed-list>li>a{
+                width:100%;
+                line-height: 24px;
+                /* ...用 */
+                overflow: hidden;
+                word-wrap: normal;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                -o-text-overflow: ellipsis;
+                -ms-text-overflow: ellipsis;
+            }
+        .nf-category-feed-list>li.on,
+        .nf-category-feed-list>li:hover{
+            background: #ccc;
+        }
+
+/*
+ * 左側
+ */
+#nf-main-contents{
+    margin-left: 260px;
+    position: fixed;
+/* ポップアップ出ないので様子見
+    overflow-x: auto;*/
+    height: 100%;
+}
+.nf-main-area{
+    min-width:940px;
+    border-left:5px solid #FF6633;
+    background-color:#f5f5f5;
+}
+.nf-main-header{
+    background-color:#FF6633;
+    line-height:1;
+    padding:0px 10px;
+    font-size:21px;
+    height:36px;
+}
+.nf-main-header:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.nf-main-header>table{
+    width:100%;
+    table-layout:fixed;
+}
+.nf-main-header>table tr{
+    height:36px;
+}
+.nf-main-header-title{
+    width:100%;
+    font-size: 21px;
+    color:#FFF;
+}
+.nf-main-header-title>span{
+    width:100%;
+    display:inline-block;
+    vertical-align: middle;
+}
+.nf-main-header-title>span>a{
+    color:#fff;
+}
+/* シェア */
+.nf-main-header-share{
+    width: 26px;
+    }
+    .nf-share-btn,
+    .btn-group.open>.nf-share-btn{
+        width: 22px;
+        height: 22px;
+        background: url(../img/ic_share_2.gif) center center no-repeat;
+        border: 1px solid #fff;
+        -webkit-border-radius: 2px;
+           -moz-border-radius: 2px;
+                border-radius: 2px;
+        display: inline-block;
+        vertical-align: middle;
+        cursor: pointer;
+    }
+.nf-popover-widget{
+    }
+    .nf-popover-widget select{
+        margin: 0;
+        width: auto;
+        text-align: right;
+    }
+.nf-main-header-tools{
+    width:380px;
+    white-space: nowrap;
+}
+.nf-main-header-search{
+    display:inline-block;
+    margin:0;
+    float:right;
+    vertical-align:middle;
+}
+.nf-search-keyword{
+    -moz-border-radius: 	12px;
+    -webkit-border-radius: 	12px;
+    border-radius: 			12px;
+    background-color:#FFFFFF;
+    padding: 0 6px 0 10px;
+    line-height:none !important;
+    height:24px;
+    margin-right:10px;
+}
+.nf-search-query{
+    border:0px !important;
+    padding:0px !important;
+    margin:0px !important;
+    width:200px !important;
+    height:24px !important;
+    float:left !important;
+    line-height:24px !important;
+    box-shadow:none !important;
+}
+.nf-ic-search{
+    margin: 4px 0 3px;
+    display:block;
+    float:left;
+    width:18px;
+    height:17px;
+    background: #f63 url(../img/ic_search.png) center center no-repeat;
+    cursor:pointer;
+}
+.nf-main-layouttype{
+    -moz-border-radius: 	2px;
+    -webkit-border-radius: 	2px;
+    border-radius: 			2px;
+    border:1px solid #fff;
+    float:right;
+}
+.nf-main-layouttype .nf-layout-btn{
+    display:block;
+    float:left;
+    width:24px;
+    height:22px;
+    cursor:pointer;
+}
+.nf-main-layouttype .nf-layout-btn.list{
+    background: url(../img/ic_lt1_off.png) center center no-repeat;
+}
+.nf-main-layouttype .nf-layout-btn.ic{
+    background: url(../img/ic_lt2_off.png) center center no-repeat;
+}
+.nf-main-layouttype .nf-layout-btn.list.on{
+    background:#f63 url(../img/ic_lt1_on.png) center center no-repeat;
+}
+.nf-main-layouttype .nf-layout-btn.ic.on{
+    background:#f63 url(../img/ic_lt2_on.png) center center no-repeat;
+}
+/* タイムラインフィルタ */
+.nf-main-filter{
+    margin-right: 10px;
+    border:1px solid #fff;
+    -webkit-border-radius: 2px;
+       -moz-border-radius: 2px;
+            border-radius: 2px;
+    float:right;
+    }
+    .nf-wlist-btn{
+        display:block;
+        float:left;
+        width:22px;
+        height:22px;
+        cursor:pointer;
+        border-right: 1px solid #fff;
+        background: url(../img/ic_filter_2.gif) center center no-repeat;
+        }
+        .nf-wlist-btn.on{
+            background-color: #f63;
+            background-image: url(../img/ic_filter_1.gif);
+        }
+    .nf-main-filter>.dropdown-toggle,
+    .nf-main-filter.open>.btn.dropdown-toggle{
+        padding: 0 4px;
+        border: 0;
+        background: none;
+        }
+        .nf-main-filter .caret{
+            margin-top: 9px;
+            border-top-color: #fff;
+        }
+    .nf-main-filter>ul{
+        max-width: 300px;
+        max-height: 400px;
+        overflow-y: auto;
+    }
+    .nf-main-filter li{
+        /* ...用 */
+        overflow: hidden;
+        word-wrap: normal;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        -o-text-overflow: ellipsis;
+        -ms-text-overflow: ellipsis;
+    }
+    .nf-main-filter li.header>span{
+        font-size: 90%;
+        color: #999;
+    }
+    .nf-main-filter li>span{
+        padding: 3px 20px;
+        font-size: 12px;
+    }
+.update {
+    margin-left:10px;
+    -moz-border-radius: 	2px;
+    -webkit-border-radius: 	2px;
+    border-radius: 			2px;
+    width:20px;
+    height:24px;
+    display:block;
+    background: url(../img/ic_update.png) center center no-repeat;
+    display:block;
+    float:right;
+}
+.update:hover,
+.update:focus {
+    text-decoration: none;
+}
+
+/* タイムライン一覧 */
+.nf-main-timeline{
+    font-size:12px;
+    min-width:900px;
+    padding: 10px 20px;
+    }
+    .nf-main-timeline .nf-timeline-article{
+        border-bottom: 1px solid #DDDDDD;
+        border-left: 1px solid transparent;
+        border-right: 1px solid transparent;
+        height:30px;
+        line-height:26px;
+    }
+    .nf-main-timeline .nf-timeline-article:first-child{
+        border-top: 1px solid #DDDDDD;
+        }
+        .nf-main-timeline .nf-timeline-headline{
+            height:30px;
+            cursor:pointer;
+        }
+        .nf-main-timeline .nf-timeline-headline:hover{
+            background-color: #F5F5F5;
+            }
+            .nf-main-timeline .nf-timeline-headline>h1,
+            .nf-main-timeline .nf-timeline-headline>span,
+            .nf-main-timeline .nf-timeline-headline>time{
+                height:26px;
+                line-height: inherit;
+                padding:2px;
+                display:inline-block;
+
+                /* ...用 */
+                overflow: hidden;
+                word-wrap: normal;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                -o-text-overflow: ellipsis;
+                -ms-text-overflow: ellipsis;
+            }
+            .nf-main-timeline .nf-timeline-site-title{
+                width:200px;
+            }
+            .nf-main-timeline .nf-timeline-acc{
+                width:50px;
+                color: #999;
+            }
+            .nf-main-timeline .nf-timeline-article-title{
+                font-weight:bold;
+                max-width:570px;
+            }
+            .nf-main-timeline .nf-timeline-summary{
+                margin-left:10px;
+            }
+            .nf-main-timeline .nf-timeline-time{
+                width:50px;
+                text-align:right;
+                float:right;
+                color: #999;
+            }
+
+    /* 開いた時 */
+    .nf-main-timeline .nf-timeline-article.view{
+        min-height:100px;
+        height:100%;
+        border-left: 1px solid #DDDDDD;
+        border-right: 1px solid #DDDDDD;
+        cursor:default;
+        position:relative;
+        }
+        .nf-main-timeline .nf-timeline-article.view .nf-timeline-headline{
+            background-color: #d3d3d3;
+            border-bottom: 1px solid #DDDDDD;
+        }
+        .nf-main-timeline .nf-timeline-article-view{
+            display:none;
+            height:100%;
+        }
+        .nf-main-timeline .nf-timeline-article.view .nf-timeline-article-view {
+            display:block;
+            }
+            .nf-main-timeline .nf-timeline-article-view-entry{
+                max-width: 680px;
+                margin:10px auto 0;
+                }
+                .nf-main-timeline .nf-timeline-article-view-entrybody{
+                }
+                .nf-main-timeline .nf-timeline-article-view-entrybody>p:last-child{
+                    margin:0;
+                }
+            .nf-main-timeline .nf-timeline-article-view-entrybtnarea {
+                margin:10px 0;
+                text-align:center;
+            }
+
+/*
+ * タイムライン一覧 見出し
+ */
+.nf-main-timeline.tbl .nf-timeline-article{
+    border: 0;
+    margin-bottom: 10px;
+    min-height:120px;
+}
+/*
+.nf-main-timeline.tbl .nf-timeline-article:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+*/
+    .nf-main-timeline.tbl .nf-timeline-article .nf-timeline-article-img{
+        float:left;
+        width:200px;
+        height:120px;
+        }
+        .nf-main-timeline.tbl .nf-timeline-article .nf-timeline-article-img>img{
+            height:120px;
+        }
+    .nf-main-timeline.tbl .nf-timeline-article .nf-timeline-headline{
+        margin-left:210px;
+        min-height:120px;
+        cursor:default;
+    }
+    .nf-main-timeline.tbl .nf-timeline-headline:hover{
+        background:none;
+        }
+        .nf-main-timeline.tbl .nf-timeline-headline .nf-timeline-article-title{
+            display:block;
+        }
+        .nf-main-timeline.tbl .nf-timeline-headline .nf-timeline-article-summary{
+            max-width:720px;
+            color:#999;
+            line-height:1.5;
+            height:4.5em;
+            overflow:hidden;
+        }
+        .nf-main-timeline.tbl .nf-timeline-headline .nf-timeline-acc{
+            width:auto;
+            display:inline-block;
+        }
+        .nf-main-timeline.tbl .nf-timeline-headline .nf-timeline-site-title{
+            width:auto;
+            max-width:200px;
+            display:inline-block;
+        }
+        .nf-main-timeline.tbl .nf-timeline-headline .nf-timeline-time{
+            width:auto;
+            display:inline-block;
+            float:none;
+        }
+.mask {
+    background: #369;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+}
+.nf-list-loading{
+    margin:0 auto;
+    display:block;
+    width: 54px;
+    height:55px;
+    margin-top:200px;
+    background-repeat: no-repeat;
+    background-image: url(../img/ic_list_loading.gif);
+}
+textarea.code{
+    font-size: 12px;
+    color: #999;
+}

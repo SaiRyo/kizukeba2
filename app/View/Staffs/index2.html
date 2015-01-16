@@ -1,0 +1,54 @@
+{include file="file:$CommonDir/SysadHeader.html" _funcno="s90"}
+
+      <div id="nf-main-contents">
+        <div class="nf-main">
+          <div class="nf-m-header">
+            <h3 class="nf-m-title">{__('ユーザー管理')}</h3>
+          </div>
+          <div class="nf-m-content">
+
+          <form method="POST" action="{cake_uri act=delete}">
+            <input type="hidden" name="page" value="{$arRetQuery.page}">
+            <div class="co-actionwrap top">
+              <div class="co-actionarea">
+                <a class="btn btn-small" href="{cake_uri act=create q_page=$arRetQuery.page}">{__('ユーザーの登録')}</a>
+                <span class="line">|</span>
+                <button type="submit" class="btn btn-small co-del" data-action="{cake_uri act=delete}">{__('削除')}</button>
+              </div>
+            </div>
+
+            <div class="nf-list-view">
+              <table class="table table-striped table-bordered">
+                <thead>
+                  <tr>
+                    <th class="co-chk"><input type="checkbox" class="co-allchk" name="user_id" /></th>
+                    <th>{__('ログインID')}</th>
+                  </tr>
+                </thead>
+                <tbody>
+{foreach from=$arUsers item=_item}
+                  <tr>
+                    <td class="co-chk"><input type="checkbox" value="{$_item.User.user_id}" name="data[User][user_id][]" /></td>
+                    <td><a href="{cake_uri act=edit pass_0=$_item.User.user_id q_init=1 q_page=$arRetQuery.page}" title="{$_item.User.login_id}">{$_item.User.login_id}</a></td>
+                  </tr>
+{foreachelse}
+                  <tr>
+                    <td colspan="2" class="co-nodata">{__('該当するデータはありません。')}</td>
+                  </tr>
+{/foreach}
+                </tbody>
+              </table>
+            </div>
+
+            <div class="co-actionwrap bottom">
+              <div class="co-actionarea">
+                <a class="btn btn-small" href="{cake_uri act=create q_page=$arRetQuery.page}">{__('ユーザーの登録')}</a>
+                <span class="line">|</span>
+                <button type="submit" class="btn btn-small co-del" data-action="{cake_uri act=delete}">{__('削除')}</button>
+              </div>
+            </div>
+          </form>
+
+          </div><!--.nf-m-content-->
+        </div><!--.nf-main-->
+      </div><!--#nf-main-contents-->

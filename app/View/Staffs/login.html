@@ -1,0 +1,29 @@
+{include file="file:$CommonDir/SysadHeader.html" _showMenu=true}
+
+      <div id="nf-login-box">
+       {include file="file:$CommonDir/AppError.html"}
+        <form method="POST" class="form-horizontal" action="{cake_uri act=login}">
+          {include file="file:$CommonDir/SysadSecure.html"}
+          <div class="control-group">
+            <label for="inputEmail" class="control-label">{__('ログインID')}</label>
+            <div class="controls">
+              <input type="text" placeholder="{__('ログインID')}" id="inputEmail" name="data[User][login_id]">
+            </div>
+          </div>
+          <div class="control-group">
+            <label for="inputPassword" class="control-label">{__('パスワード')}</label>
+            <div class="controls">
+              <input type="password" placeholder="{__('パスワード')}" id="inputPassword" name="data[User][password]">
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="controls">
+              <button class="btn" type="submit">{__('ログイン')}</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="text-center">
+        <a href="{cake_uri ctrl=Reader act=index}">{$smarty.const.APP_NAME}</a>
+      </div>
+{include file="file:$CommonDir/SysadFooter.html"}
